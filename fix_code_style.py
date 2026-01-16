@@ -54,10 +54,10 @@ def main():
 
     # Run fixes
     fixes = [
-        ("black edge_estimators tests examples", "Format code with Black"),
-        ("ruff check --fix edge_estimators tests examples", "Fix linting issues with Ruff"),
-        ("black --check edge_estimators tests examples", "Verify Black formatting"),
-        ("ruff check edge_estimators tests examples", "Verify Ruff checks"),
+        ("black estimator tests examples", "Format code with Black"),
+        ("ruff check --fix estimator tests examples", "Fix linting issues with Ruff"),
+        ("black --check estimator tests examples", "Verify Black formatting"),
+        ("ruff check estimator tests examples", "Verify Ruff checks"),
     ]
 
     results = []

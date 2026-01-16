@@ -35,8 +35,8 @@ pip install black ruff
 python fix_code_style.py
 
 # Or manually:
-black edge_estimators tests examples
-ruff check --fix edge_estimators tests examples
+black estimator tests examples
+ruff check --fix estimator tests examples
 ```
 
 ### 3. Run Tests

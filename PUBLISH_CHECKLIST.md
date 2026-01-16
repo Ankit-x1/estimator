@@ -17,8 +17,8 @@
    ```bash
    python fix_code_style.py
    # Or manually:
-   black edge_estimators tests examples
-   ruff check --fix edge_estimators tests examples
+   black estimator tests examples
+   ruff check --fix estimator tests examples
    ```
 
 2. **Verify README Encoding**
@@ -42,7 +42,7 @@
    ```bash
    python -m build
    python -m twine check dist/*
-   pip install dist/edge_estimators-*.whl --force-reinstall
+   pip install dist/estimator-*.whl --force-reinstall
    ```
 
 6. **Test on TestPyPI First**
@@ -85,7 +85,7 @@ python -m twine upload dist/*
 
 When releasing a new version:
 
-1. Update `edge_estimators/__init__.py`: `__version__ = "0.1.1"`
+1. Update `estimator/__init__.py`: `__version__ = "0.1.1"`
 2. Update `CHANGELOG.md` with new version
 3. Commit changes: `git commit -am "Bump version to 0.1.1"`
 4. Tag release: `git tag v0.1.1`

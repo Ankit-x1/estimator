@@ -34,11 +34,11 @@ Here's a simple example of fusing synthetic GPS and encoder data to estimate the
 
 ```python
 import numpy as np
-from edge_estimators.core.estimator import EKF
-from edge_estimators.core.state import State
-from edge_estimators.models.measurement.encoder import Encoder
-from edge_estimators.models.measurement.gps import GPS
-from edge_estimators.models.process.constant_velocity import ConstantVelocity
+from estimator.core.estimator import EKF
+from estimator.core.state import State
+from estimator.models.measurement.encoder import Encoder
+from estimator.models.measurement.gps import GPS
+from estimator.models.process.constant_velocity import ConstantVelocity
 
 # Initial state: [px, py, vx, vy]
 initial_x = np.array([0.0, 0.0, 1.0, 0.5])

@@ -5,7 +5,7 @@
 ### 1. Version Synchronization
 - **Fixed**: Changed `pyproject.toml` to use dynamic version from `__init__.py`
 - **Before**: Hardcoded `version = "0.1.0"` in both files
-- **After**: `dynamic = ["version"]` with `attr = "edge_estimators.__version__"`
+- **After**: `dynamic = ["version"]` with `attr = "estimator.__version__"`
 - **Benefit**: Single source of truth for version
 
 ### 2. Type Hints (mypy errors)
@@ -64,7 +64,7 @@
    ```bash
    python -m build
    python -m twine check dist/*
-   pip install dist/edge_estimators-*.whl --force-reinstall
+   pip install dist/estimator-*.whl --force-reinstall
    ```
 
 ### Optional (Nice to Have):

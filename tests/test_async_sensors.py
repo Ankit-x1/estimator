@@ -2,11 +2,11 @@
 
 import numpy as np
 
-from edge_estimators.core.estimator import EKF
-from edge_estimators.core.state import State
-from edge_estimators.models.measurement.encoder import Encoder
-from edge_estimators.models.measurement.gps import GPS
-from edge_estimators.models.process.constant_velocity import ConstantVelocity
+from estimator.core.estimator import EKF
+from estimator.core.state import State
+from estimator.models.measurement.encoder import Encoder
+from estimator.models.measurement.gps import GPS
+from estimator.models.process.constant_velocity import ConstantVelocity
 
 
 def test_async_sensors():

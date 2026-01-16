@@ -51,10 +51,10 @@ Issues = "https://github.com/Ankit-x1/estimator/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["edge_estimators*"]
+include = ["estimator*"]
 
 [tool.setuptools.dynamic]
-version = {attr = "edge_estimators.__version__"}
+version = {attr = "estimator.__version__"}
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

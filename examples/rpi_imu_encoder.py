@@ -7,12 +7,12 @@ Note: This is a simulation; replace with actual sensor drivers.
 
 import numpy as np
 
-from edge_estimators.core.estimator import EKF
-from edge_estimators.core.state import State
-from edge_estimators.gating.mahalanobis import MahalanobisGate
-from edge_estimators.models.measurement.encoder import Encoder
-from edge_estimators.models.process.constant_velocity import ConstantVelocity
-from edge_estimators.noise.adaptive import AdaptiveNoise
+from estimator.core.estimator import EKF
+from estimator.core.state import State
+from estimator.gating.mahalanobis import MahalanobisGate
+from estimator.models.measurement.encoder import Encoder
+from estimator.models.process.constant_velocity import ConstantVelocity
+from estimator.noise.adaptive import AdaptiveNoise
 
 
 def simulate_rpi_sensors():

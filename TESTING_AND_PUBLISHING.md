@@ -41,7 +41,7 @@ pip install -e ".[jax]"
 ### 1.3 Verify Installation
 
 ```bash
-python -c "import edge_estimators; print(edge_estimators.__version__)"
+python -c "import estimator; print(estimator.__version__)"
 ```
 
 ---
@@ -58,7 +58,7 @@ pytest
 pytest -v
 
 # Run with coverage report
-pytest --cov=edge_estimators --cov-report=html
+pytest --cov=estimator --cov-report=html
 
 # Run specific test file
 pytest tests/test_convergence.py
@@ -95,9 +95,9 @@ Run the examples from README to ensure they work:
 # Test basic example
 python -c "
 import numpy as np
-from edge_estimators import EKF, State
-from edge_estimators.models.process.constant_velocity import ConstantVelocity
-from edge_estimators.models.measurement.encoder import Encoder
+from estimator import EKF, State
+from estimator.models.process.constant_velocity import ConstantVelocity
+from estimator.models.measurement.encoder import Encoder
 
 initial_x = np.array([0.0, 1.0])
 initial_P = np.eye(2) * 0.1
@@ -123,7 +123,7 @@ print('✅ Basic example works!')
 
 ```bash
 python -c "
-from edge_estimators.backend import get_backend
+from estimator.backend import get_backend
 
 # Test NumPy backend
 backend_np = get_backend('numpy')
@@ -142,8 +142,8 @@ except ImportError:
 
 ```bash
 python -c "
-from edge_estimators.models.process import ConstantVelocity, ConstantAcceleration, IMUKinematics
-from edge_estimators.models.measurement import Encoder, IMU, GPS, Magnetometer
+from estimator.models.process import ConstantVelocity, ConstantAcceleration, IMUKinematics
+from estimator.models.measurement import Encoder, IMU, GPS, Magnetometer
 
 # Test process models
 cv = ConstantVelocity(dim=1)
@@ -180,11 +180,11 @@ python examples/imu_encoder_sim.py
 pip install flake8
 
 # Run flake8
-flake8 edge_estimators --max-line-length=100 --ignore=E203,W503
+flake8 estimator --max-line-length=100 --ignore=E203,W503
 
 # Or use black for formatting
 pip install black
-black --check edge_estimators
+black --check estimator
 ```
 
 ### 4.2 Type Checking (Optional)
@@ -194,7 +194,7 @@ black --check edge_estimators
 pip install mypy
 
 # Run type checking
-mypy edge_estimators --ignore-missing-imports
+mypy estimator --ignore-missing-imports
 ```
 
 ---
@@ -217,8 +217,8 @@ rm -rf dist/ build/ *.egg-info
 python -m build
 
 # This creates:
-# - dist/edge_estimators-0.1.0.tar.gz (source distribution)
-# - dist/edge_estimators-0.1.0-py3-none-any.whl (wheel)
+# - dist/estimator-0.1.0.tar.gz (source distribution)
+# - dist/estimator-0.1.0-py3-none-any.whl (wheel)
 ```
 
 ### 5.3 Verify Build
@@ -228,10 +228,10 @@ python -m build
 python -m twine check dist/*
 
 # Test install from local build
-pip install dist/edge_estimators-0.1.0-py3-none-any.whl --force-reinstall
+pip install dist/estimator-0.1.0-py3-none-any.whl --force-reinstall
 
 # Test import
-python -c "import edge_estimators; print(edge_estimators.__version__)"
+python -c "import estimator; print(estimator.__version__)"
 ```
 
 ---
@@ -242,13 +242,13 @@ python -c "import edge_estimators; print(edge_estimators.__version__)"
 
 Before publishing, update version in:
 - `pyproject.toml` (line 7)
-- `edge_estimators/__init__.py` (line 10)
+- `estimator/__init__.py` (line 10)
 
 ```python
 # In pyproject.toml
 version = "0.1.0"  # Update to next version
 
-# In edge_estimators/__init__.py
+# In estimator/__init__.py
 __version__ = "0.1.0"  # Update to match
 ```
 
@@ -298,7 +298,7 @@ python -m twine upload dist/*
 pip install edge-estimators
 
 # Test import
-python -c "import edge_estimators; print(edge_estimators.__version__)"
+python -c "import estimator; print(estimator.__version__)"
 ```
 
 ---
@@ -400,7 +400,7 @@ pip install -e ".[dev]"
 
 # Test
 pytest -v
-pytest --cov=edge_estimators
+pytest --cov=estimator
 
 # Build
 python -m build

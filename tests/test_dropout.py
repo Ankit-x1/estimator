@@ -2,10 +2,10 @@
 
 import numpy as np
 
-from edge_estimators.core.estimator import KF
-from edge_estimators.core.state import State
-from edge_estimators.models.measurement.encoder import Encoder
-from edge_estimators.models.process.constant_velocity import ConstantVelocity
+from estimator.core.estimator import KF
+from estimator.core.state import State
+from estimator.models.measurement.encoder import Encoder
+from estimator.models.process.constant_velocity import ConstantVelocity
 
 
 def test_dropout_recovery():
