@@ -1,5 +1,5 @@
 """
-edge-estimators: Production-focused state estimation runtime.
+estimator: Production-focused state estimation runtime.
 
 Sensor-first, deployment-ready, numerically robust.
 """
