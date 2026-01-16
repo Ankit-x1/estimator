@@ -48,7 +48,7 @@
 6. **Test on TestPyPI First**
    ```bash
    python -m twine upload --repository testpypi dist/*
-   pip install --index-url https://test.pypi.org/simple/ edge-estimators
+   pip install --index-url https://test.pypi.org/simple/ estimator
    ```
 
 ### Optional Improvements
