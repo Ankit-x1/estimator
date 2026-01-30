@@ -2,11 +2,11 @@
 
 import numpy as np
 
-from estimator.core.estimator import KF
-from estimator.core.state import State
-from estimator.models.measurement.encoder import Encoder
-from estimator.models.process.constant_velocity import ConstantVelocity
-from estimator.utils.linalg import is_psd
+from estedge.core.estimator import KF
+from estedge.core.state import State
+from estedge.models.measurement.encoder import Encoder
+from estedge.models.process.constant_velocity import ConstantVelocity
+from estedge.utils.linalg import is_psd
 
 
 def test_covariance_psd():

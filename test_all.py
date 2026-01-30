@@ -13,21 +13,21 @@ def test_imports():
     """Test all main imports."""
     print("Testing imports...")
     try:
-        from estimator import EKF, KF, UKF, State
-        from estimator.backend import get_backend
-        from estimator.gating import MahalanobisGate
-        from estimator.models.measurement import (
+        from estedge import EKF, KF, UKF, State
+        from estedge.backend import get_backend
+        from estedge.gating import MahalanobisGate
+        from estedge.models.measurement import (
             GPS,
             IMU,
             Encoder,
             Magnetometer,
         )
-        from estimator.models.process import (
+        from estedge.models.process import (
             ConstantAcceleration,
             ConstantVelocity,
             IMUKinematics,
         )
-        from estimator.noise import AdaptiveNoise, StaticNoise
+        from estedge.noise import AdaptiveNoise, StaticNoise
 
         # Instantiate each imported class to mark it as "used"
         _ = KF
@@ -57,9 +57,9 @@ def test_basic_kf():
     """Test basic KF functionality."""
     print("\nTesting KF...")
     try:
-        from estimator import KF, State
-        from estimator.models.measurement.encoder import Encoder
-        from estimator.models.process.constant_velocity import ConstantVelocity
+        from estedge import KF, State
+        from estedge.models.measurement.encoder import Encoder
+        from estedge.models.process.constant_velocity import ConstantVelocity
 
         initial_x = np.array([0.0, 1.0])
         initial_P = np.eye(2) * 0.1
@@ -90,9 +90,9 @@ def test_basic_ekf():
     """Test basic EKF functionality."""
     print("\nTesting EKF...")
     try:
-        from estimator import EKF, State
-        from estimator.models.measurement.encoder import Encoder
-        from estimator.models.process.constant_velocity import ConstantVelocity
+        from estedge import EKF, State
+        from estedge.models.measurement.encoder import Encoder
+        from estedge.models.process.constant_velocity import ConstantVelocity
 
         initial_x = np.array([0.0, 1.0])
         initial_P = np.eye(2) * 0.1
@@ -121,9 +121,9 @@ def test_basic_ukf():
     """Test basic UKF functionality."""
     print("\nTesting UKF...")
     try:
-        from estimator import UKF, State
-        from estimator.models.measurement.encoder import Encoder
-        from estimator.models.process.constant_velocity import ConstantVelocity
+        from estedge import UKF, State
+        from estedge.models.measurement.encoder import Encoder
+        from estedge.models.process.constant_velocity import ConstantVelocity
 
         initial_x = np.array([0.0, 1.0])
         initial_P = np.eye(2) * 0.1
@@ -152,7 +152,7 @@ def test_backend():
     """Test backend functionality."""
     print("\nTesting backend...")
     try:
-        from estimator.backend import get_backend
+        from estedge.backend import get_backend
 
         # Test NumPy backend
         backend = get_backend("numpy")
@@ -178,10 +178,10 @@ def test_multi_sensor():
     """Test multi-sensor EKF."""
     print("\nTesting multi-sensor EKF...")
     try:
-        from estimator import EKF, State
-        from estimator.models.measurement.encoder import Encoder
-        from estimator.models.measurement.gps import GPS
-        from estimator.models.process.constant_velocity import ConstantVelocity
+        from estedge import EKF, State
+        from estedge.models.measurement.encoder import Encoder
+        from estedge.models.measurement.gps import GPS
+        from estedge.models.process.constant_velocity import ConstantVelocity
 
         initial_x = np.array([0.0, 0.0, 2.0, 1.0])  # [px, py, vx, vy]
         initial_P = np.eye(4) * 0.1
@@ -216,10 +216,10 @@ def test_adaptive_noise():
     """Test adaptive noise."""
     print("\nTesting adaptive noise...")
     try:
-        from estimator import EKF, State
-        from estimator.models.measurement.encoder import Encoder
-        from estimator.models.process.constant_velocity import ConstantVelocity
-        from estimator.noise.adaptive import AdaptiveNoise
+        from estedge import EKF, State
+        from estedge.models.measurement.encoder import Encoder
+        from estedge.models.process.constant_velocity import ConstantVelocity
+        from estedge.noise.adaptive import AdaptiveNoise
 
         initial_x = np.array([0.0, 1.0])
         initial_P = np.eye(2) * 0.1
@@ -253,8 +253,8 @@ def test_all_models():
     """Test all model classes can be instantiated."""
     print("\nTesting all models...")
     try:
-        from estimator.models.measurement import GPS, IMU, Encoder, Magnetometer
-        from estimator.models.process import (
+        from estedge.models.measurement import GPS, IMU, Encoder, Magnetometer
+        from estedge.models.process import (
             ConstantAcceleration,
             ConstantVelocity,
             IMUKinematics,

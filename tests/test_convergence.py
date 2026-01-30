@@ -2,10 +2,10 @@
 
 import numpy as np
 
-from estimator.core.estimator import EKF, KF
-from estimator.core.state import State
-from estimator.models.measurement.encoder import Encoder
-from estimator.models.process.constant_velocity import ConstantVelocity
+from estedge.core.estimator import EKF, KF
+from estedge.core.state import State
+from estedge.models.measurement.encoder import Encoder
+from estedge.models.process.constant_velocity import ConstantVelocity
 
 
 def test_kf_convergence():

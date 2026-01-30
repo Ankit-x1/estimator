@@ -7,11 +7,11 @@ Demonstrates handling sensors at different rates (IMU 400Hz, GPS 5Hz).
 import matplotlib.pyplot as plt
 import numpy as np
 
-from estimator.core.estimator import EKF
-from estimator.core.state import State
-from estimator.models.measurement.encoder import Encoder
-from estimator.models.measurement.gps import GPS
-from estimator.models.process.constant_velocity import ConstantVelocity
+from estedge.core.estimator import EKF
+from estedge.core.state import State
+from estedge.models.measurement.encoder import Encoder
+from estedge.models.measurement.gps import GPS
+from estedge.models.process.constant_velocity import ConstantVelocity
 
 
 def simulate_async_sensors():
