@@ -202,8 +202,8 @@ If you use EstEdge in your research, please cite:
 ```bibtex
 @software{estedge,
   title={EstEdge: Production-focused state estimation runtime for edge devices},
-  author={EstEdge Contributors},
-  year={2024},
+  author={Ankit Karki},
+  year={2025},
   url={https://github.com/Ankit-x1/estimator}
 }
 ```
