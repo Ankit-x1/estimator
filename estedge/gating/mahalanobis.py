@@ -2,6 +2,7 @@
 
 import numpy as np
 
+
 class MahalanobisGate:
     """
     Mahalanobis distance gating for outlier rejection.
