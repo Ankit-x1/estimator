@@ -107,12 +107,6 @@ ekf.update(z=encoder_measurement, sensor_name="encoder", timestamp=t)
 - `ConstantAcceleration`: Linear constant acceleration dynamics
 - `IMUKinematics`: IMU-based kinematic modeling
 
-#### Measurement Models
-- `GPS`: GPS position measurements
-- `IMU`: IMU acceleration and angular velocity
-- `Encoder`: Encoder position/velocity measurements
-- `Magnetometer`: Magnetic field measurements
-
 ## Backend Selection
 
 ### NumPy Backend (Default)
